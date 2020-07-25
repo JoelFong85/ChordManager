@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "3c833021-88a5-4d34-adff-1a51b41d51a0",
+		"name": "Hendricks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddChords",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ChordName",
+							"value": "f major",
+							"type": "text"
+						},
+						{
+							"key": "Note1",
+							"value": "f",
+							"type": "text"
+						},
+						{
+							"key": "Note2",
+							"value": "A",
+							"type": "text"
+						},
+						{
+							"key": "Note3",
+							"value": "C",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "c-major.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:51199/api/Chords/AddChord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51199",
+					"path": [
+						"api",
+						"Chords",
+						"AddChord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAllChords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51199/api/Chords/ListAllChords",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51199",
+					"path": [
+						"api",
+						"Chords",
+						"ListAllChords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadAudioFileByChord",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ChordName\":\"c major\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51199/api/Chords/DownloadAudioFileByChord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51199",
+					"path": [
+						"api",
+						"Chords",
+						"DownloadAudioFileByChord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetChordByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ChordName\":\"c major\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51199/api/Chords/GetChordByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51199",
+					"path": [
+						"api",
+						"Chords",
+						"GetChordByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateChord",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ChordName",
+							"value": "e major",
+							"type": "text"
+						},
+						{
+							"key": "Note1",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Note2",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "Note3",
+							"value": "B",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "c-major.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:51199/api/Chords/UpdateChord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51199",
+					"path": [
+						"api",
+						"Chords",
+						"UpdateChord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteChord",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ChordName\":\"F major\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51199/api/Chords/DeleteChord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51199",
+					"path": [
+						"api",
+						"Chords",
+						"DeleteChord"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
