@@ -16,6 +16,8 @@ Chord Manager is a library to save chords & upload audio files for the chords
 ## Database
 Database can be found in App_Data > AudioDump.mdf 
 
+AudioDump.mdf can be queried via VS' server explorer tab.
+
 ## Postman Collections for Testing
 Postman collection for testing is available: ChordManager_Postman_Collection.json
 
