@@ -13,6 +13,13 @@ Chord Manager is a library to save chords & upload audio files for the chords
 - Build solution (ctrl-shift-B). Dependencies will be downloaded for the build.
 - Run project in IIS Express (Google Chrome preferred).
 
+## CRUD functions
+The following functions are available:
+- C: AddChords
+- R: ListAllChords / GetChordByName / DownloadAudioFileByChord
+- U: UpdateChord
+- D: DeleteChord
+
 ## Database
 Database can be found in App_Data > AudioDump.mdf 
 
