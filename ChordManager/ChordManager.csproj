@@ -186,6 +186,9 @@
       <DependentUpon>AudioDump.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Chords\Chord.cs" />
+    <Compile Include="Models\Chords\DeleteChordRequestModel.cs" />
+    <Compile Include="Models\Chords\DownloadAudioFileByChordRequestModel.cs" />
+    <Compile Include="Models\Chords\GetChordByNameRequestModel.cs" />
     <Compile Include="Models\PackedResponse.cs" />
     <Compile Include="Models\T_Chord.cs">
       <DependentUpon>AudioDump.tt</DependentUpon>

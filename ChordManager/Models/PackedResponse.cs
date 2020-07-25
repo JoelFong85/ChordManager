@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web;
 using WebGrease;
 
@@ -23,6 +25,23 @@ namespace ChordManager.Models
         {
             var response = new HttpResponseMessage(HttpStatus);
             response.Content = new StringContent(ResponseMessage);
+            return response;
+        }
+
+        public HttpResponseMessage PackAsJson()
+        {
+            var response = new HttpResponseMessage(HttpStatus);
+            response.Content = new StringContent(ResponseMessage, Encoding.UTF8, "application/json");
+            return response;
+        }
+
+        public HttpResponseMessage PackAsDownload(MemoryStream dataStream, string chordName, string audioFileExt)
+        {
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+            response.Content = new StreamContent(dataStream);
+            response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
+            response.Content.Headers.ContentDisposition.FileName = $@"{chordName}.{audioFileExt}";
+            response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
             return response;
         }
 

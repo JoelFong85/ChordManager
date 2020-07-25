@@ -15,6 +15,7 @@
           <Property Name="Note_2" Type="varchar" MaxLength="2" Nullable="false" />
           <Property Name="Note_3" Type="varchar" MaxLength="2" Nullable="false" />
           <Property Name="Is_Valid" Type="bit" />
+          <Property Name="Audio_File_Ext" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="AudioDumpModelStoreContainer">
           <EntitySet Name="T_Chord" EntityType="Self.T_Chord" Schema="dbo" store:Type="Tables" />
@@ -33,6 +34,7 @@
           <Property Name="Note_2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Note_3" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Is_Valid" Type="Boolean" />
+          <Property Name="Audio_File_Ext" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="AudioDumpEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="T_Chord" EntityType="Self.T_Chord" />
@@ -46,6 +48,7 @@
           <EntitySetMapping Name="T_Chord">
             <EntityTypeMapping TypeName="AudioDumpModel.T_Chord">
               <MappingFragment StoreEntitySet="T_Chord">
+                <ScalarProperty Name="Audio_File_Ext" ColumnName="Audio_File_Ext" />
                 <ScalarProperty Name="Is_Valid" ColumnName="Is_Valid" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Chord_Name" ColumnName="Chord_Name" />

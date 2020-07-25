@@ -20,5 +20,6 @@ namespace ChordManager.Models
         public string Note_2 { get; set; }
         public string Note_3 { get; set; }
         public Nullable<bool> Is_Valid { get; set; }
+        public string Audio_File_Ext { get; set; }
     }
 }
