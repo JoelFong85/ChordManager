@@ -1,0 +1,32 @@
+Test Cases for Validation
+
+AddChord
+- ChordName passed in must not be null or empty
+- None of the fields can be missing for a successful Chord creation
+- Notes must not be null or empty
+- Must have audio file attached
+- Notes must be in the list of possible notes
+- Chord must not already exist
+- Audio file format must be mp3, wav, 3gp, flac, wma
+
+ListAllChords
+- only returns chords where Is_Valid column = true
+
+GetChordByName
+- chordName is null or empty
+- chordName does not exist
+
+UpdateChord
+- chordname passed in must not be null or empty
+- chordname must exist
+- Notes must be in the list of possible notes
+- pass in chordname, should be able to update any combination of note1, note2, note3, audiofile (form inputs that are left empty will not be updated)
+
+DeleteChord
+- chordname must not be null or empty
+- chord must exist
+
+
+Download AudioFileByChord
+- chord must exist
+
